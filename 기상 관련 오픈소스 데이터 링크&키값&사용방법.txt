@@ -1,0 +1,24 @@
+＊날씨, 온도, 습도 등의 데이터 받아올 곳 : 오픈웨더맵(https://openweathermap.org/)
+기상청 데이터를 가져오려고 했으나, 기상청에서 데이터를 정상적으로 제공하지 않는 관계로, 다른 사이트 사용.
+
+API 키값 : 7e721bae8975cd1ba2ea5d7dc85a5a2e
+로그인을 통해서 개인 발급받은 값 / 추가 발급과정 없이 이것으로 아무나 해도 정보 받아올 수 있음.
+
+정보 받아오는 법 : https://api.openweathermap.org/data/2.5/weather?lat=위도&lon=경도&appid=키값
+lat에 해당하는 부분에 위도, lon에 해당하는 부분에 경도 값을 넣고, 키값에 해당하는 부분을 입력 시 현재 시점에 해당하는 위치의 날씨정보를 보여준다.
+ - mode 추가입력을 통해 json -> xml 파일로 변경
+ - units 추가입력을 통해 온도를 화씨-> 섭씨로 변경
+ - lang 추가 입력을 통해서 영어 -> 한글로 변경(변경부분이 적어서 크게 의미가 없다)
+&mode=xml&units=metric&lang=kr
+
+예시코드 : https://api.openweathermap.org/data/2.5/weather?lat=37.541&lon=126.986&appid=7e721bae8975cd1ba2ea5d7dc85a5a2e&mode=xml&units=metric&lang=kr
+입력시 용산 지역의 정보가 나온다.
+
+
+
+＊미세먼지 정보 받아올 곳 : 공공 데이터포털(https://www.data.go.kr/)
+'대기오염정보 조회 서비스' api 사용
+
+https://www.data.go.kr/subMain.jsp#/L3B1YnIvcG90L215cC9Jcm9zTXlQYWdlL29wZW5EZXZEZXRhaWxQYWdlJEBeMDgyTTAwMDAxMzBeTTAwMDAxMzUkQF5wdWJsaWNEYXRhRGV0YWlsUGs9dWRkaTo3MDkxMTBlNy1kN2IxLTQ0MjEtOTBiYS04NGE2OWY5ODBjYWJfMjAxNjA4MDgxMTE0JEBecHJjdXNlUmVxc3RTZXFObz03NDk3NjY0JEBecmVxc3RTdGVwQ29kZT1TVENEMDE=
+
+링크 주소와 키값은 첨부하나, 로그인 후 신청처리를 해야 하기 때문에 사용할 사람이 개인 단위로 접속이 필요. 
